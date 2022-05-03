@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/memeListFragment">
+
+    <fragment
+        android:id="@+id/memeListFragment"
+        android:name="edu.rit.memeapp.ui.MemeListFragment"
+        android:label="List of Memes"
+        tools:layout="@layout/fragment_meme_list" />
+    <fragment
+        android:id="@+id/memeDetailFragment"
+        android:name="edu.rit.memeapp.MemeDetailFragment"
+        tools:layout="@layout/fragment_meme_detail">
+        <argument
+            android:name="meme"
+            app:argType="edu.rit.memeapp.data.model.Meme" />
+    </fragment>
+
+    <action android:id="@+id/action_global_memeDetailFragment" app:destination="@id/memeDetailFragment" />
+</navigation>
