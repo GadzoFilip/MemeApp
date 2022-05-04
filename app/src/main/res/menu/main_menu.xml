@@ -4,6 +4,11 @@
     <item
         android:id="@+id/memeListFragment"
         android:title="List of Memes"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+    <item
+        android:id="@+id/memeFavoritesFragment"
+        android:title="Favorite memes"
+        android:icon="@drawable/ic_baseline_favorite_24"
         />
 </menu>

@@ -11,6 +11,11 @@
         android:label="List of Memes"
         tools:layout="@layout/fragment_meme_list" />
     <fragment
+        android:id="@+id/memeFavoritesFragment"
+        android:name="edu.rit.memeapp.ui.favorites.MemeFavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_meme_favorites" />
+    <fragment
         android:id="@+id/memeDetailFragment"
         android:name="edu.rit.memeapp.MemeDetailFragment"
         tools:layout="@layout/fragment_meme_detail">

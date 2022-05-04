@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
 
     private val navBarConfiguration = AppBarConfiguration(setOf(
-        R.id.memeListFragment
+        R.id.memeListFragment,
+        R.id.memeFavoritesFragment
     ))
 
     override fun onSupportNavigateUp(): Boolean = navController.navigateUp()
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { controller, destination, bundle ->
             when (destination.id) {
                 R.id.memeListFragment,
+                R.id.memeFavoritesFragment -> binding.bottomNav.visibility = View.VISIBLE
                 R.id.memeDetailFragment -> binding.bottomNav.visibility = View.GONE
             }
         }
