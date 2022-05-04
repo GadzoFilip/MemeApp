@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import edu.rit.memeapp.data.model.Meme
+import edu.rit.memeapp.data.model.MemeInfo
 import edu.rit.memeapp.data.repository.MemeRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -11,7 +12,7 @@ import kotlinx.coroutines.launch
 class MemeListViewModel(
     private val repository: MemeRepository = MemeRepository()
 ): ViewModel() {
-    val memeData: MutableLiveData<List<Meme>> = MutableLiveData()
+    val memeData: MutableLiveData<List<MemeInfo>> = MutableLiveData()
 
     init{
         getMemeData()
@@ -20,7 +21,7 @@ class MemeListViewModel(
     fun getMemeData(){
         viewModelScope.launch(Dispatchers.IO){
             val memes = repository.getMeme()
-            memeData.postValue(memes)
+            memeData.postValue(memes.data)
         }
     }
 }

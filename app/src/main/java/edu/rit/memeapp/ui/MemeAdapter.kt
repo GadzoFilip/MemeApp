@@ -6,25 +6,26 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import edu.rit.memeapp.R
 import edu.rit.memeapp.data.model.Meme
+import edu.rit.memeapp.data.model.MemeInfo
 import edu.rit.memeapp.databinding.MemeItemBinding
 import edu.rit.memeapp.util.loadUrl
 
 class MemeAdapter(
-    private val onTap: (Meme) -> Unit
+    private val onTap: (MemeInfo) -> Unit
 ): RecyclerView.Adapter<MemeAdapter.MemeViewHolder>() {
     class MemeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         private val binding = MemeItemBinding.bind(itemView)
 
-        fun bind(meme: Meme){
-//            binding.ivMeme.loadUrl(meme.data.image, false)
-            binding.tvMemeTop.text = meme.data.topText
-            binding.tvMemeBottom.text = meme.data.bottomText
+        fun bind(meme: MemeInfo){
+            binding.ivMeme.loadUrl(meme.image, false)
+            binding.tvMemeTop.text = meme.topText
+            binding.tvMemeBottom.text = meme.bottomText
         }
     }
 
-    private var data: List<Meme> = listOf()
+    private var data: List<MemeInfo> = listOf()
 
-    fun setData(new: List<Meme>){
+    fun setData(new: List<MemeInfo>){
         data = new
         notifyDataSetChanged()
     }

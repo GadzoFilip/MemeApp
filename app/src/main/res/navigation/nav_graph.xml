@@ -16,7 +16,7 @@
         tools:layout="@layout/fragment_meme_detail">
         <argument
             android:name="meme"
-            app:argType="edu.rit.memeapp.data.model.Meme" />
+            app:argType="edu.rit.memeapp.data.model.MemeInfo" />
     </fragment>
 
     <action android:id="@+id/action_global_memeDetailFragment" app:destination="@id/memeDetailFragment" />

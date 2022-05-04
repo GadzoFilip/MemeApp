@@ -8,7 +8,7 @@ import retrofit2.http.GET
 interface MemeService {
 
     @GET("1")
-    suspend fun getMemes(): List<Meme>
+    suspend fun getMemes(): Meme
     companion object {
         private const val baseUrl = "https://alpha-meme-maker.herokuapp.com/"
 

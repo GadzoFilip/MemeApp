@@ -16,14 +16,14 @@ class MemeDetailFragment: Fragment(R.layout.fragment_meme_detail) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMemeDetailBinding.bind(view)
 
-        binding.tvMemeName.text = args.meme.data.name
-        binding.tvMemeTags.text = args.meme.data.tags
+        binding.tvMemeName.text = args.meme.name
+        binding.tvMemeTags.text = args.meme.tags
 
-        binding.memeItem.ivMeme.loadUrl(args.meme.data.image, false)
-        binding.memeItem.tvMemeTop.text = args.meme.data.topText
-        binding.memeItem.tvMemeBottom.text = args.meme.data.bottomText
+        binding.memeItem.ivMeme.loadUrl(args.meme.image, false)
+        binding.memeItem.tvMemeTop.text = args.meme.topText
+        binding.memeItem.tvMemeBottom.text = args.meme.bottomText
 
 
-        (requireActivity() as AppCompatActivity).supportActionBar?.title = args.meme.data.topText
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = args.meme.topText
     }
 }

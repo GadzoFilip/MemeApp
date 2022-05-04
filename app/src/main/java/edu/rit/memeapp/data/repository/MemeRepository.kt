@@ -7,5 +7,5 @@ class MemeRepository (
 
 private val apiService: MemeService = MemeService.client
 ) {
-    suspend fun getMeme(): List<Meme> = apiService.getMemes()
+    suspend fun getMeme(): Meme = apiService.getMemes()
 }
