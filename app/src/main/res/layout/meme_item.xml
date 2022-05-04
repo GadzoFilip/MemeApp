@@ -9,33 +9,40 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="440dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="16dp"
-        android:gravity="center_vertical">
+        android:padding="16dp">
+
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="348dp"
+            android:layout_height="407dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="16dp"
-            android:gravity="center_vertical">
-            <ImageView
-                android:id="@+id/iv_meme"
-                android:layout_width="345dp"
-                android:layout_height="345dp"/>
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/tv_meme_top"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/iv_meme"
-                android:layout_alignRight="@id/iv_meme"
                 android:layout_alignTop="@id/iv_meme"
-                android:layout_margin="10dp"
+                android:layout_alignRight="@id/iv_meme"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="-47dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="11dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                />
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_meme"
+                android:layout_width="311dp"
+                android:layout_height="287dp" />
+
             <TextView
                 android:id="@+id/tv_meme_bottom"
                 android:layout_width="wrap_content"
@@ -43,11 +50,15 @@
                 android:layout_alignLeft="@id/iv_meme"
                 android:layout_alignRight="@id/iv_meme"
                 android:layout_alignBottom="@id/iv_meme"
-                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="-41dp"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                />
+                android:textStyle="bold" />
         </RelativeLayout>
     </LinearLayout>
 

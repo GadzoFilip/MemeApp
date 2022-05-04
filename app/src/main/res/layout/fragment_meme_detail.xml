@@ -7,13 +7,14 @@
     android:orientation="vertical">
 
     <include layout="@layout/meme_item" android:id="@+id/memeItem" />
+
     <TextView
         android:id="@+id/tv_meme_name"
+        style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppCompat.Headline"
-        android:text="Name"
-        />
+        android:text="Name" />
+
     <TextView
         android:id="@+id/tv_meme_tags"
         android:layout_width="match_parent"
