@@ -16,6 +16,16 @@
         android:label="Favorites"
         tools:layout="@layout/fragment_meme_favorites" />
     <fragment
+        android:id="@+id/memeCreateFragment"
+        android:name="edu.rit.memeapp.ui.MemeCreateFragment"
+        android:label="Create"
+        tools:layout="@layout/fragment_meme_create" />
+    <fragment
+        android:id="@+id/memeCreateListFragment"
+        android:name="edu.rit.memeapp.ui.MemeCreateListFragment"
+        android:label="Created List"
+        tools:layout="@layout/fragment_create_list" />
+    <fragment
         android:id="@+id/memeDetailFragment"
         android:name="edu.rit.memeapp.MemeDetailFragment"
         tools:layout="@layout/fragment_meme_detail">

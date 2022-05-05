@@ -11,4 +11,16 @@
         android:title="Favorite memes"
         android:icon="@drawable/ic_baseline_favorite_24"
         />
+
+    <item
+        android:id="@+id/memeCreateFragment"
+        android:title="Create"
+        android:icon="@drawable/ic_baseline_create_24"
+        />
+
+    <item
+        android:id="@+id/memeCreateListFragment"
+        android:title="Created List"
+        android:icon="@drawable/ic_baseline_view_list_24"
+        />
 </menu>

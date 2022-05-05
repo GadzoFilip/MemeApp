@@ -1,8 +1,13 @@
 package edu.rit.memeapp
 
+import android.content.Intent
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -16,7 +21,9 @@ class MainActivity : AppCompatActivity() {
 
     private val navBarConfiguration = AppBarConfiguration(setOf(
         R.id.memeListFragment,
-        R.id.memeFavoritesFragment
+        R.id.memeFavoritesFragment,
+        R.id.memeCreateFragment,
+        R.id.memeCreateListFragment
     ))
 
     override fun onSupportNavigateUp(): Boolean = navController.navigateUp()
@@ -34,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { controller, destination, bundle ->
             when (destination.id) {
                 R.id.memeListFragment,
+                R.id.memeCreateFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.memeCreateListFragment -> binding.bottomNav.visibility = View.VISIBLE
                 R.id.memeFavoritesFragment -> binding.bottomNav.visibility = View.VISIBLE
                 R.id.memeDetailFragment -> binding.bottomNav.visibility = View.GONE
             }

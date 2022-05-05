@@ -5,7 +5,6 @@ import androidx.room.Room
 import edu.rit.memeapp.data.local.AppDatabase
 import edu.rit.memeapp.data.model.MemeInfo
 
-
 class FavoritesRepository(applicationContext: Context) {
 
     private val db = Room.databaseBuilder(

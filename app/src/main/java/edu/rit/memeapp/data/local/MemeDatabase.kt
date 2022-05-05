@@ -1,8 +1,6 @@
 package edu.rit.memeapp.data.local
 
-
 import androidx.room.*
-
 import edu.rit.memeapp.data.model.MemeInfo
 
 @Dao
@@ -19,7 +17,6 @@ interface MemeDao {
     @Delete
     suspend fun delete(meme: MemeInfo)
 }
-
 
 @Database(entities = [MemeInfo::class], version = 1)
 abstract class AppDatabase: RoomDatabase() {
