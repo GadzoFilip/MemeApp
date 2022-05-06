@@ -9,25 +9,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
-
-    <TextView
-        android:id="@+id/tv_add_top_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        android:textColor="#AAFFFFFF"
-        android:text="Add Top Text" />
 
     <EditText
         android:id="@+id/et_top_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:ems="10"
         android:textColorHint="#AAFFFFFF"
         android:textColor="#AAFFFFFF"
@@ -36,42 +29,37 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
          />
-
     <TextView
-        android:id="@+id/tv_image"
+        android:id="@+id/tv_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:id="@+id/iv_add_meme"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_add_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:textColor="#AAFFFFFF"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:text="Add Image" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="16dp"
-        android:onClick="access"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:id="@+id/tv_add_bottom_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#AAFFFFFF"
-            android:text="Add Bottom Text" />
-
         <EditText
             android:id="@+id/et_bottom_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
@@ -80,52 +68,45 @@
             android:backgroundTint="@android:color/white"
             android:hint="Bottom Text" />
 
-        <TextView
-            android:id="@+id/tv_add_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#AAFFFFFF"
-            android:text="Add Name" />
 
         <EditText
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColor="#AAFFFFFF"
             android:textColorHint="#AAFFFFFF"
             android:backgroundTint="@android:color/white"
-            android:hint="Name" />
+            android:hint="Name of the meme" />
 
-        <TextView
-            android:id="@+id/tv_add_tag"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#AAFFFFFF"
-            android:text="Add Tag(s)" />
 
         <EditText
             android:id="@+id/et_tags"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColor="#AAFFFFFF"
             android:textColorHint="#AAFFFFFF"
             android:backgroundTint="@android:color/white"
-            android:hint="Tag(s)" />
-    </LinearLayout>
+            android:hint="Add tag(s)" />
+
 
     <Button
-        android:id="@+id/btn_toggle_favorites"
+        android:id="@+id/btn_create_meme"
         style="@style/Widget.MaterialComponents.ActionBar.Primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="2dp"
-        android:text="Add to List" />
+        android:layout_marginTop="10dp"
+        android:text="Create" />
 </LinearLayout>
 </ScrollView>
