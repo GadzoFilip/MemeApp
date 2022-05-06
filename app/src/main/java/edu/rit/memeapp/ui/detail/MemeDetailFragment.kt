@@ -1,4 +1,4 @@
-package edu.rit.memeapp
+package edu.rit.memeapp.ui.detail
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
+import edu.rit.memeapp.R
 import edu.rit.memeapp.data.repository.FavoritesRepository
 import edu.rit.memeapp.databinding.FragmentMemeDetailBinding
 import edu.rit.memeapp.util.loadUrl

@@ -11,6 +11,7 @@ import edu.rit.memeapp.databinding.FragmentMemeFavoritesBinding
 import edu.rit.memeapp.ui.MemeAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MemeFavoritesFragment : Fragment(R.layout.fragment_meme_favorites) {
 
@@ -31,7 +32,9 @@ class MemeFavoritesFragment : Fragment(R.layout.fragment_meme_favorites) {
 
         lifecycleScope.launch(Dispatchers.IO) {
             val data = repo.getAllMemes()
-            adapter.setData(data)
+            withContext(Dispatchers.Main){
+                adapter.setData(data)
+            }
         }
     }
 }

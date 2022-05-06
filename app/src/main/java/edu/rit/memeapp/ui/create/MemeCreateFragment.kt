@@ -1,19 +1,27 @@
-package edu.rit.memeapp.ui
+package edu.rit.memeapp.ui.create
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.text.TextUtils
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
+import android.view.ViewGroup
 import android.widget.ImageView
 import edu.rit.memeapp.databinding.FragmentMemeCreateBinding
 import androidx.fragment.app.Fragment
 import edu.rit.memeapp.R
-import edu.rit.memeapp.databinding.FragmentMemeListBinding
+import edu.rit.memeapp.data.model.MemeInfo
 
 class MemeCreateFragment: Fragment(R.layout.fragment_meme_create) {
 
     private lateinit var binding: FragmentMemeCreateBinding
+    private lateinit var topText: String
+    private lateinit var bottomText: String
+    private lateinit var name: String
+    private lateinit var image: ImageView
+
     companion object {
         val IMAGE_REQUEST_CODE = 100
 

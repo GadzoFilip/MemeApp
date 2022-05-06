@@ -17,17 +17,17 @@
         tools:layout="@layout/fragment_meme_favorites" />
     <fragment
         android:id="@+id/memeCreateFragment"
-        android:name="edu.rit.memeapp.ui.MemeCreateFragment"
+        android:name="edu.rit.memeapp.ui.create.MemeCreateFragment"
         android:label="Create"
         tools:layout="@layout/fragment_meme_create" />
     <fragment
         android:id="@+id/memeCreateListFragment"
-        android:name="edu.rit.memeapp.ui.MemeCreateListFragment"
+        android:name="edu.rit.memeapp.ui.create.MemeCreateListFragment"
         android:label="Created List"
         tools:layout="@layout/fragment_create_list" />
     <fragment
         android:id="@+id/memeDetailFragment"
-        android:name="edu.rit.memeapp.MemeDetailFragment"
+        android:name="edu.rit.memeapp.ui.detail.MemeDetailFragment"
         tools:layout="@layout/fragment_meme_detail">
         <argument
             android:name="meme"
