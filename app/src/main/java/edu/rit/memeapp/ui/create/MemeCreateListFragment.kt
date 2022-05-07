@@ -1,11 +1,14 @@
 package edu.rit.memeapp.ui.create
 
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import coil.ImageLoader
 import edu.rit.memeapp.R
 import edu.rit.memeapp.databinding.FragmentCreateListBinding
 
@@ -26,4 +29,6 @@ class MemeCreateListFragment: Fragment(R.layout.fragment_create_list) {
             adapter.setData(memes)
         })
     }
+
+
 }

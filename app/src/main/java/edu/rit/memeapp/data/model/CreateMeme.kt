@@ -1,6 +1,6 @@
 package edu.rit.memeapp.data.model
 
-import android.widget.ImageView
+import android.graphics.Bitmap
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -11,5 +11,5 @@ data class CreateMeme (
     val topText: String,
     val bottomText: String,
     val name: String,
-//    val image: ImageView
+//    val image: Bitmap
 )

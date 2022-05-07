@@ -4,7 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import edu.rit.memeapp.data.model.CreateMeme
+import edu.rit.memeapp.util.Converters
 
 @Database(entities = [CreateMeme::class], version = 1, exportSchema = false)
 abstract class CreatedMemeDatabase: RoomDatabase() {
