@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import edu.rit.memeapp.R
-import edu.rit.memeapp.data.model.Meme
 import edu.rit.memeapp.data.model.MemeInfo
 import edu.rit.memeapp.databinding.MemeItemBinding
 import edu.rit.memeapp.util.loadUrl

@@ -1,13 +1,11 @@
 package edu.rit.memeapp.ui.create
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import edu.rit.memeapp.R
 import edu.rit.memeapp.data.model.CreateMeme
-import edu.rit.memeapp.data.model.MemeInfo
 import edu.rit.memeapp.databinding.CreateMemeItemBinding
 
 class MemeCreateListAdapter: RecyclerView.Adapter<MemeCreateListAdapter.MemeViewHolder>() {
@@ -15,11 +13,13 @@ class MemeCreateListAdapter: RecyclerView.Adapter<MemeCreateListAdapter.MemeView
     private var createMemeList = emptyList<CreateMeme>()
 
     class MemeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+
         private val binding = CreateMemeItemBinding.bind(itemView);
          fun bind(meme: CreateMeme){
              binding.tvName.text = meme.name
              binding.tvBottomText.text = meme.bottomText
              binding.tvTopText.text = meme.topText
+
          }
     }
 
@@ -40,4 +40,5 @@ class MemeCreateListAdapter: RecyclerView.Adapter<MemeCreateListAdapter.MemeView
         val data = createMemeList[position]
         holder.bind(data)
     }
+
 }

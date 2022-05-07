@@ -3,7 +3,6 @@ package edu.rit.memeapp.ui
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import edu.rit.memeapp.data.model.Meme
 import edu.rit.memeapp.data.model.MemeInfo
 import edu.rit.memeapp.data.repository.MemeRepository
 import kotlinx.coroutines.Dispatchers
@@ -18,7 +17,7 @@ class MemeListViewModel(
         getMemeData()
     }
 
-    fun getMemeData(){
+    private fun getMemeData(){
         viewModelScope.launch(Dispatchers.IO){
             val memes = repository.getMeme()
             memeData.postValue(memes.data)

@@ -14,7 +14,4 @@ interface CreateMemeDao {
     @Query("SELECT * FROM created_meme_table ORDER BY id ASC")
     fun readData(): LiveData<List<CreateMeme>>
 
-    @Delete
-    suspend fun deleteMeme(meme: CreateMeme)
-
 }

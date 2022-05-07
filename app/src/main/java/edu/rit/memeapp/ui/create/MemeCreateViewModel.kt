@@ -1,11 +1,9 @@
 package edu.rit.memeapp.ui.create
 
 import android.app.Application
-import android.graphics.Bitmap
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import coil.ImageLoader
 import edu.rit.memeapp.data.local.CreatedMemeDatabase
 import edu.rit.memeapp.data.model.CreateMeme
 import edu.rit.memeapp.data.repository.CreatedMemeRepository
@@ -29,9 +27,4 @@ class MemeCreateViewModel(application: Application): AndroidViewModel(applicatio
         }
     }
 
-    fun deleteMeme(meme: CreateMeme){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.deleteMeme(meme)
-        }
-    }
 }
