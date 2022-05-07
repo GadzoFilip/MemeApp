@@ -14,7 +14,6 @@ import kotlinx.coroutines.launch
 
 class MemeCreateViewModel(application: Application): AndroidViewModel(application) {
 
-
     val readData: LiveData<List<CreateMeme>>
     private val repository: CreatedMemeRepository
 
@@ -27,6 +26,12 @@ class MemeCreateViewModel(application: Application): AndroidViewModel(applicatio
     fun addCreatedMeme(meme: CreateMeme) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.addMeme(meme)
+        }
+    }
+
+    fun deleteMeme(meme: CreateMeme){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteMeme(meme)
         }
     }
 }

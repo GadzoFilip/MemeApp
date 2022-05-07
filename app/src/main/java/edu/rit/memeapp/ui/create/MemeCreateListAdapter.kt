@@ -18,7 +18,7 @@ class MemeCreateListAdapter: RecyclerView.Adapter<MemeCreateListAdapter.MemeView
         private val binding = CreateMemeItemBinding.bind(itemView);
          fun bind(meme: CreateMeme){
              binding.tvName.text = meme.name
-             binding.tvMemeBottom.text = meme.bottomText
+             binding.tvBottomText.text = meme.bottomText
              binding.tvTopText.text = meme.topText
          }
     }

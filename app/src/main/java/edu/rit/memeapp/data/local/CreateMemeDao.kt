@@ -1,11 +1,9 @@
 package edu.rit.memeapp.data.local
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import edu.rit.memeapp.data.model.CreateMeme
+import retrofit2.http.DELETE
 
 @Dao
 interface CreateMemeDao {
@@ -15,5 +13,8 @@ interface CreateMemeDao {
 
     @Query("SELECT * FROM created_meme_table ORDER BY id ASC")
     fun readData(): LiveData<List<CreateMeme>>
+
+    @Delete
+    suspend fun deleteMeme(meme: CreateMeme)
 
 }

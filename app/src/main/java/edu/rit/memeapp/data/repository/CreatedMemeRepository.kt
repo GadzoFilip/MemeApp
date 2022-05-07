@@ -11,4 +11,8 @@ class CreatedMemeRepository(private val createdMemeDao: CreateMemeDao) {
     suspend fun addMeme(meme: CreateMeme) {
         createdMemeDao.addMeme(meme)
     }
+
+    suspend fun deleteMeme(meme: CreateMeme){
+        createdMemeDao.deleteMeme(meme)
+    }
 }
