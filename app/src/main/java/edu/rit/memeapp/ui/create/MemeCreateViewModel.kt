@@ -13,13 +13,13 @@ import kotlinx.coroutines.launch
 class MemeCreateViewModel(application: Application): AndroidViewModel(application) {
 
 
-    private val readAllData: LiveData<List<CreateMeme>>
+    val readData: LiveData<List<CreateMeme>>
     private val repository: CreatedMemeRepository
 
     init {
         val createdMemeDao = CreatedMemeDatabase.getDatabase(application).createdMemeDao()
         repository = CreatedMemeRepository(createdMemeDao)
-        readAllData = repository.readAllData
+        readData = repository.readData
     }
 
     fun addCreatedMeme(meme: CreateMeme) {

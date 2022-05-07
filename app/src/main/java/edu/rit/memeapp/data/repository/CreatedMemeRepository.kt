@@ -6,7 +6,7 @@ import edu.rit.memeapp.data.model.CreateMeme
 
 class CreatedMemeRepository(private val createdMemeDao: CreateMemeDao) {
 
-    val readAllData: LiveData<List<CreateMeme>> = createdMemeDao.readAllData()
+    val readData: LiveData<List<CreateMeme>> = createdMemeDao.readData()
 
     suspend fun addMeme(meme: CreateMeme) {
         createdMemeDao.addMeme(meme)

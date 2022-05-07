@@ -20,7 +20,7 @@ import edu.rit.memeapp.data.model.MemeInfo
 class MemeCreateFragment: Fragment(R.layout.fragment_meme_create) {
 
     private lateinit var binding: FragmentMemeCreateBinding
-    private lateinit var mMemeViewModel: MemeCreateViewModel
+    private lateinit var memeViewModel: MemeCreateViewModel
 
     private lateinit var topText: String
     private lateinit var bottomText: String
@@ -34,7 +34,7 @@ class MemeCreateFragment: Fragment(R.layout.fragment_meme_create) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mMemeViewModel = ViewModelProvider(this)[MemeCreateViewModel::class.java]
+        memeViewModel = ViewModelProvider(this)[MemeCreateViewModel::class.java]
 
         binding = FragmentMemeCreateBinding.bind(view)
 
@@ -67,7 +67,7 @@ class MemeCreateFragment: Fragment(R.layout.fragment_meme_create) {
         name = binding.etName.text.toString()
 
         val meme = CreateMeme(0, topText, bottomText, name)
-        mMemeViewModel.addCreatedMeme(meme)
+        memeViewModel.addCreatedMeme(meme)
         Toast.makeText(requireContext(), "New meme successfully created", Toast.LENGTH_LONG).show()
 
     }

@@ -1,18 +1,15 @@
 package edu.rit.memeapp.ui.create
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.rit.memeapp.R
 import edu.rit.memeapp.databinding.FragmentCreateListBinding
-import edu.rit.memeapp.ui.MemeListViewModel
 
-class MemeCreateListFragment: Fragment() {
+class MemeCreateListFragment: Fragment(R.layout.fragment_create_list) {
 
     private val viewModel: MemeCreateViewModel by activityViewModels()
     private lateinit var binding: FragmentCreateListBinding
@@ -21,12 +18,12 @@ class MemeCreateListFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentCreateListBinding.bind(view)
 
+        val adapter = MemeCreateListAdapter()
         binding.rvCreate.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvCreate.adapter = adapter
 
-
-
-//        viewModel.memeData.observe(viewLifecycleOwner) { memes ->
-//            adapter.setData(memes)
-//        }
+        viewModel.readData.observe(viewLifecycleOwner, Observer { memes ->
+            adapter.setData(memes)
+        })
     }
 }
